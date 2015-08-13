@@ -1,4 +1,4 @@
-if exists('g:prf_vim_loaded')
+if exists('b:current_syntax')
     finish
 endif
 
@@ -7,9 +7,7 @@ syntax match prfStatement '|-=>'
 syntax region prfComment start=+(\*+ end=+\*)+
 syntax region prfComment start=+//+ end=+$+
 
-highlight link prfStatement Statement
-highlight link prfComment Comment
+highlight def link prfStatement Statement
+highlight def link prfComment Comment
 
 let b:current_syntax = "prf"
-
-let g:prf_vim_loaded = 1

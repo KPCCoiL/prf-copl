@@ -4,7 +4,7 @@ endif
 
 augroup detect_prf
     autocmd!
-    autocmd BufNewFile,BufRead set filetype=prf
+    autocmd BufNewFile,BufRead *.prf set filetype=prf
 augroup END
 
 let g:detect_prf_loaded = 1
